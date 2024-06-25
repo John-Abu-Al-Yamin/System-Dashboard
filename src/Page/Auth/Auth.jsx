@@ -63,13 +63,14 @@ const Auth = () => {
                   </div>
                   <p className="text-start underline cursor-pointer text-xs text-black">
                     Forgot your password?
-                  </p>
-                  <button
-                    onClick={(e) => onSubmit(e)}
-                    className="block w-full  rounded-lg bg-red-600 px-5 py-2 text-sm font-medium text-white"
+                  </p>     <button
+                    type="submit"
+                    className="block w-full cursor-pointer rounded-lg bg-red-600 px-5 py-2 text-sm font-medium text-white"
+                    disabled={!loading}
                   >
-                    Sign in
+                    {loading && isPress ? "Loading..." : "Sign in"}
                   </button>
+                  
                 </form>
                 <p className="text-white mt-10 text-xs text-center ">
                   © 2024 Firm Foundation School Management
