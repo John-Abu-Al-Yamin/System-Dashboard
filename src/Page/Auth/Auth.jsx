@@ -75,7 +75,7 @@ const Auth = () => {
                   <button
                     type="submit"
                     className="block w-full cursor-pointer rounded-lg bg-red-600 px-5 py-2 text-sm font-medium text-white"
-                    disabled={loading}
+                    disabled={!loading}
                   >
                     {loading && isPressed ? "Loading..." : "Sign in"}
                   </button>
