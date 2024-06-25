@@ -75,7 +75,7 @@ const Auth = () => {
                     className={`block w-full rounded-lg bg-red-600 px-5 py-2 text-sm font-medium text-white ${
                       loading ? "opacity-50 cursor-not-allowed" : "hover:bg-red-700"
                     }`}
-                    disabled={!loading}
+                    disabled={loading}
                   >
                     {loading && isPress ? <>
                       <div class="text-center">
