@@ -4,7 +4,7 @@ import useLoginHook from "../../hook/auth/login-hook";
 import { ToastContainer } from "react-toastify";
 
 const Auth = () => {
-  const {
+  const [
     email,
     password,
     loading,
@@ -12,7 +12,7 @@ const Auth = () => {
     handleChangePassword,
     handleSubmit,
     isPressed,
-  } = useLoginHook();
+  ] = useLoginHook();
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -74,10 +74,10 @@ const Auth = () => {
                   </p>
                   <button
                     type="submit"
+                    disabled={isPressed}
                     className="block w-full cursor-pointer rounded-lg bg-red-600 px-5 py-2 text-sm font-medium text-white"
-                    
                   >
-                    Sign in
+                    {isPressed ? "Loading..." : "Sign in"}
                   </button>
                 </form>
                 <p className="text-white mt-10 text-xs text-center">
